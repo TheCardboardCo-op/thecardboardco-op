@@ -16,7 +16,7 @@
             overflow-x: hidden;
         }
 
-        /* Background Elements */
+        /* Background Art with Dark Overlay for Readability */
         .bg-mesh {
             position: fixed;
             top: 0;
@@ -24,12 +24,13 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: 
-                radial-gradient(circle at 0% 0%, rgba(30, 58, 138, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 100% 100%, rgba(88, 28, 135, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 1) 0%, rgba(2, 6, 23, 1) 100%);
+            background-image: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.8)), url('1769050391260.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
+        /* Subtle animated dot pattern layer */
         .bg-dots {
             position: fixed;
             top: 0;
@@ -42,6 +43,7 @@
             mask-image: radial-gradient(ellipse at center, black, transparent 80%);
         }
 
+        /* Floating Mana Icons in Background */
         .mana-icon {
             position: absolute;
             opacity: 0.03;
@@ -50,7 +52,7 @@
             pointer-events: none;
         }
 
-        /* High Contrast Button Styling */
+        /* High Contrast Primary Button Styling */
         .store-btn {
             background: #ffffff;
             color: #0f172a;
@@ -101,26 +103,24 @@
     <div class="bg-mesh"></div>
     <div class="bg-dots"></div>
     
-    <!-- Background Floating Mana Icons -->
-    <svg class="mana-icon top-20 left-[10%] w-32 h-32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
-    <svg class="mana-icon bottom-40 right-[15%] w-48 h-48" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-    <svg class="mana-icon top-1/2 left-[5%] w-24 h-24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-
     <!-- Header / Logo Section -->
     <div class="w-full max-w-md flex flex-col items-center mb-12 text-center">
         <div class="w-48 h-48 mb-6 flex items-center justify-center logo-glow">
+            <!-- Logo filename must match what is uploaded to GitHub -->
             <img src="image_a939d2.png" alt="The Cardboard Co-op Logo" class="w-full h-full object-contain" onerror="this.src='https://via.placeholder.com/200?text=TCCO'">
         </div>
         
         <h1 class="text-4xl font-black tracking-tighter text-white mb-4 italic uppercase">THE CARDBOARD CO-OP</h1>
         
-        <div class="flex flex-col items-center space-y-3">
-            <a href="https://denvercardshows.com/" target="_blank" class="flex items-center space-x-2 bg-blue-500/10 px-4 py-1.5 rounded-full border border-blue-500/30 hover:bg-blue-500/20 transition-colors">
+        <div class="flex flex-col items-center space-y-4">
+            <!-- Event Badge Link -->
+            <a href="https://denvercardshows.com/" target="_blank" class="flex items-center space-x-2 bg-blue-500/10 px-4 py-1.5 rounded-full border border-blue-500/30 hover:bg-blue-500/20 transition-all active:scale-95">
                 <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
                 <span class="text-blue-400 font-bold text-xs uppercase tracking-widest">See us in person!</span>
             </a>
             
-            <div class="flex flex-wrap justify-center items-center gap-x-5 gap-y-2 mt-2 text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">
+            <!-- Social Proof / Feedback Links -->
+            <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">
                 <a href="https://manapool.com/shop/thecardboardcoop/profile" target="_blank" class="feedback-link">ManaPool 100%</a>
                 <span class="opacity-20">|</span>
                 <a href="https://feedback.ebay.com/fdbk/feedback_profile/thecardboardco_op" target="_blank" class="feedback-link">eBay 100%</a>
@@ -130,7 +130,7 @@
         </div>
     </div>
 
-    <!-- Links Section -->
+    <!-- Main Store Links Container -->
     <div class="w-full max-w-md space-y-6">
         
         <!-- ManaPool Store -->
@@ -140,8 +140,8 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             </div>
             <div class="flex-grow text-left relative z-10">
-                <h2 class="font-black text-slate-900 text-2xl leading-tight">Shop on ManaPool</h2>
-                <p class="text-xs text-slate-500 font-bold mt-1 leading-relaxed">Buy MTG singles</p>
+                <h2 class="font-black text-slate-900 text-2xl leading-tight uppercase italic">ManaPool</h2>
+                <p class="text-xs text-slate-500 font-bold mt-1 leading-relaxed">Shop MTG singles</p>
             </div>
             <svg class="w-6 h-6 text-slate-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
         </a>
@@ -153,8 +153,8 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
             </div>
             <div class="flex-grow text-left relative z-10">
-                <h2 class="font-black text-slate-900 text-2xl leading-tight">Shop on eBay</h2>
-                <p class="text-xs text-slate-500 font-bold mt-1 leading-relaxed">Browse signed & graded cards, artist proofs, playmats, and more...</p>
+                <h2 class="font-black text-slate-900 text-2xl leading-tight uppercase italic">eBay Store</h2>
+                <p class="text-xs text-slate-500 font-bold mt-1 leading-relaxed">Signed cards, artist proofs & playmats</p>
             </div>
             <svg class="w-6 h-6 text-slate-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
         </a>
@@ -166,18 +166,18 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </div>
             <div class="flex-grow text-left relative z-10">
-                <h2 class="font-black text-slate-900 text-2xl leading-tight italic uppercase">Instagram</h2>
-                <p class="text-xs text-slate-500 font-bold mt-1 leading-relaxed">Check out the latest pulls, updates, and show information!</p>
+                <h2 class="font-black text-slate-900 text-2xl leading-tight uppercase italic">Instagram</h2>
+                <p class="text-xs text-slate-500 font-bold mt-1 leading-relaxed">Latest pulls and event updates</p>
             </div>
             <svg class="w-6 h-6 text-slate-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
         </a>
 
     </div>
 
-    <!-- Footer Information -->
+    <!-- Footer Copyright -->
     <div class="mt-auto pt-20 text-center">
         <div class="h-px w-20 bg-slate-800 mx-auto mb-6"></div>
-        <p class="text-slate-500 text-[10px] uppercase tracking-[0.4em] font-black mb-4">Official Marketplace Redirect</p>
+        <p class="text-slate-500 text-[10px] uppercase tracking-[0.4em] font-black mb-4">Official Marketplace Hub</p>
         <p class="text-slate-600 text-[10px] font-bold">© 2026 THE CARDBOARD CO-OP. ALL RIGHTS RESERVED.</p>
     </div>
 
